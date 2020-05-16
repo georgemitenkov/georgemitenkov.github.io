@@ -1,38 +1,20 @@
 <!doctype html>
 <html lang="en">
 	<html>
-        <head>
-            <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
-            <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 
-            <style>
-                html, body, h1, h2, h3, h4, h5 {font-family: "Raleway", sans-serif}
-            </style>
-
-            <title>
-                {{ page.title }}
-            </title>
-		</head>  <!-- /.head -->
+        {% include head.html %}
+        
 		<body>
-			<nav>
-	    		<ul>
-	        		<li><a href="/">Home</a></li>
-		        	<li><a href="/about">About</a></li>
-	        		<li><a href="/cv">CV</a></li>
-	        		<li><a href="/blog">Blog</a></li>
-	    		</ul>
-			</nav>
-			<div class="container">
+
+            <div class="container">
 			
-			{{ content }}
-			
-			</div> <!-- /.container -->
-			<footer>
-	    		<ul>
-	        		<li><a href="mailto:georgemitenk0v@gmail.com">email</a></li>
-	        		<li><a href="https://github.com/georgemitenkov">github.com/georgemitenkov</a></li>
-				</ul>
-			</footer>
+                {% include header.html %}
+                
+                {{ content }}
+                
+                {% include footer.html %}
+            
+            </div> <!-- /container -->
+            
 		</body>
 	</html>
